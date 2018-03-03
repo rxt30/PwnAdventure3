@@ -68,8 +68,7 @@ PostgreSQL is used to store the team, the players, items, etc. According to the 
 In order to create the user and the table, we first need to switch to the `postgres` user:
 
 ```
-su -
-su postgres
+sudo su postgres
 
 # template1 is the default source database name for CREATE DATABASE
 psql template1
@@ -91,9 +90,6 @@ template1=# \q
 You are still authenticated as `postgres`, so now you need to get back to your pwn3 user:
 
 ```
-# Get back to root
-exit
-
 # Get back to pwn3
 exit
 ```
@@ -215,6 +211,7 @@ Instances=5
 ```
 
 
+
 Start your server
 -----------------
 
@@ -229,11 +226,14 @@ cd ~/PwnAdventure3/servers/GameServer/PwnAdventure3_Data/PwnAdventure3/PwnAdvent
 ./PwnAdventure3Server
 ```
 
-Instead of running the master and game server separately, you can use the following script:
+Instead of running the master and game server separately, you can use the following script bash script `pwn3.sh`:
 
 ```
-(cd ~/PwnAdventure3/server/MasterServer/ &amp;&amp; ./MasterServer) & (cd ~/PwnAdventure3/client/PwnAdventure3_Data/PwnAdventure3/Binaries/Linux/ && ./PwnAdventure3Server)
+(cd ~/PwnAdventure3/servers/MasterServer/ && ./MasterServer) & (cd ~/PwnAdventure3/GameServer/PwnAdventure3_Data/PwnAdventure3/Binaries/Linux/ && ./PwnAdventure3Server)
 ```
+
+> __note:__ Don't forget to set execution permission with `chmod +x pwn3.sh`
+
 
 
 Configure your client
