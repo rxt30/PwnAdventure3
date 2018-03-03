@@ -11,7 +11,7 @@ According to the requirement listed on the official page, you need an [Ubuntu 14
 
 In my case, I installed Ubuntu Desktop VM with 5.5Go of RAM on [VirtualBox](https://www.virtualbox.org/).
 
-You first need to create the user _pwn3_. Once the installation done, you should install the latest updates:
+You first need to create the user `pwn3`. Once the installation done, you should install the latest updates:
 
 ```
 sudo apt-get update

@@ -26,7 +26,7 @@ The game is structure in 3 parts:
 * Master server
 * Game server
 
-> _note:_ The following information is purely build on assumptions and not from the official developers.
+> __note:__ The following information is purely build on assumptions and not from the official developers.
 
 
 ### Client
@@ -60,16 +60,16 @@ Reverse network
 
 ### Client <> Game server
 
-The network protocol used between the __client__ and __game server__ has been partially reversed [here](Network/pwn3-gs.md). A Wireshark dissector has been built and is available [here](Network/pwn3-gs.lua). You will also find a Python proxy to intercept and manipulate the communication.
+The network protocol used between the _client_ and _game server_ has been partially reversed [here](Network/pwn3-gs.md). A Wireshark dissector has been built and is available [here](Network/pwn3-gs.lua). You will also find a Python proxy to intercept and manipulate the communication.
 
 
 ### Client <> Master server
 
-I'm currently working on the reverse of the protocol used between the __client__ and the __master server__. The communication is over SSL, therefore, you first need to load the master key in `Preferences...` > `Protocols` > `SSL` > `RSA keys list` > `Edit`. The key is available:
+I'm currently working on the reverse of the protocol used between the _client_ and the _master server_. The communication is over SSL, therefore, you first need to load the master key in `Preferences...` > `Protocols` > `SSL` > `RSA keys list` > `Edit`. The key is available:
 
-* Linux: PwnAdventure3_Data/PwnAdventure3/PwnAdventure3/Content/Server/server.key
-* macOS: Pwn Adventure 3.app/Contents/PwnAdventure3/PwnAdventure3.app/Contents/UE4/PwnAdventure3/Content/Server/server.key
-* Windows: PwnAdventure3_Data/PwnAdventure3/PwnAdventure3/Content/Server/server.key
+* Linux: `PwnAdventure3_Data/PwnAdventure3/PwnAdventure3/Content/Server/server.key`
+* macOS: `Pwn Adventure 3.app/Contents/PwnAdventure3/PwnAdventure3.app/Contents/UE4/PwnAdventure3/Content/Server/server.key`
+* Windows: `PwnAdventure3_Data/PwnAdventure3/PwnAdventure3/Content/Server/server.key`
 
 
 
@@ -78,8 +78,8 @@ Reverse binary
 
 The important file to reverse is the game logic library. This is where all the logic happen, e.g. AI, health/mana management, movement, etc. The library is available:
 
-* Linux: PwnAdventure3_Data/PwnAdventure3/PwnAdventure3/Binary/Linux/libGameLogic.so
-* macOS: Pwn Adventure 3.app/Contents/PwnAdventure3/PwnAdventure3.app/Contents/MacOS/GameLogic.dylib
-* Windows: PwnAdventure3_Data/PwnAdventure3/PwnAdventure3/Binaries/Win32/GameLogic.dll (together with the PDB)
+* Linux: `PwnAdventure3_Data/PwnAdventure3/PwnAdventure3/Binary/Linux/libGameLogic.so`
+* macOS: `Pwn Adventure 3.app/Contents/PwnAdventure3/PwnAdventure3.app/Contents/MacOS/GameLogic.dylib`
+* Windows: `PwnAdventure3_Data/PwnAdventure3/PwnAdventure3/Binaries/Win32/GameLogic.dll (together with the PDB)`
 
-A binary patcher is available [here](Binary/binpatcher.py) as well as the source code for a hook (Linux - LD_PRELOAD) [here](Binary/hook-linux.cc).
+A binary patcher is available [here](Binary/binpatcher.py) as well as the source code for a hook (Linux - `LD_PRELOAD`) [here](Binary/hook-linux.cc).
