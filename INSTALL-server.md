@@ -1,6 +1,9 @@
 Install Pwn Adventure 3 server
 ==============================
 
+You might want to run your own server instance. The official install guide may sometime be a bit confusing. Therefore, here is a tutorial to install and configure your own Pwn Adventure 3 server.
+
+
 Initial setup
 -------------
 
