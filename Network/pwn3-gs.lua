@@ -1,12 +1,12 @@
 -- -----------------------------------------------------------
 --
--- Name: Pwn Adventure 3 Wireshark Plugin
+-- Name: Pwn Adventure 3 Game Server Wireshark Plugin
 -- Version: v1.0.0 (01/05/2017)
--- Date: 20/06/2017
+-- Date: 01/03/2018
 -- Created By: Antonin Beaujeant
--- Notes: For more information on this plugin visit https://blog.keyidentity.com/2017/06/20/pwnadventure3-building-a-wireshark-parser/
--- Feedback: If you have feedback on the plugin you can send it to pwn3<at>foxmole<dot>com
--- Protocol Documentation: https://blog.keyidentity.com/2017/06/13/pwnadventure3-network-protocol/
+-- Notes: For more information on this plugin visit https://beaujeant.github.io
+-- Feedback: If you have feedback on the plugin you can DM me @beaujeant
+-- Protocol Documentation: Network/pwn3-gs.md
 --
 -- Release Notes:
 -- 1.00 Initial Release.
@@ -52,7 +52,7 @@
 -- -----------------------------------------------------------
 
 
-PWN3 = Proto ("pwn3", "Pwn Adventure 3 - Game server protocol")
+PWN3 = Proto ("pwn3-gs", "Pwn Adventure 3 - Game server protocol")
 
 
 -- FIELDS
