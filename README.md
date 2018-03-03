@@ -3,7 +3,7 @@ Pwn Adventure 3
 
 Pwn Adventure 3: Pwnie Island is a game developed by [Vector35](https://vector35.com/) ([Binary Ninja](https://binary.ninja)'s devs) for the [Ghost in the Shellcode](http://ghostintheshellcode.com/) 2015 CTF. The game is a first-person, true open-world MMORPG where the gamer is expected to exploit vulnerabilities in order to finish the quests (and achievements) scattered all over the beautiful island (and beyond). For this, the _hacker_ will have to reverse engineer the network protocol as well as the game logic.
 
-As of now (March 2018), Vector35 still run a game server so that anyone can play the game online out of the box. Nevertheless, should you want to run your own server (e.g. the official is down or you to run your own local server with you friends), you will find the install guide here.
+As of now (March 2018), Vector35 still run a game server so that anyone can play the game online out of the box. Nevertheless, should you want to run your own server (e.g. the official is down or you want to run your own local server with you friends), you will find the install guide [here](INSTALL-server.md).
 
 Vector35 offers a [training](https://vector35.com/training.html) based on Pwn Adventure including new challenges. There is also a workshop [[slides](https://www.slideshare.net/AntoninBeaujeant/reverse-engineering-a-mmorpg)] available that covers most of the quests (5/7).
 
@@ -26,9 +26,8 @@ The game is structure in 3 parts:
 * Master server
 * Game server
 
-```
-_Note:_ The following information is purely build on assumptions and not from the official developers.
-```
+> _note:_ The following information is purely build on assumptions and not from the official developers.
+
 
 ### Client
 

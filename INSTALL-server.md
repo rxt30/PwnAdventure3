@@ -190,7 +190,7 @@ Then you will need to change the _game servers_ config file to point to your _ma
 vi ~/PwnAdventure3/servers/GameServer/PwnAdventure3_Data/PwnAdventure3/PwnAdventure3/Content/Server/server.ini
 ```
 
-> __Note:__ Use nano or your favourite text editor if you don't feel comfortable with `vi`
+> __note:__ Use nano or your favourite text editor if you don't feel comfortable with `vi`
 
 Since my _game servers_ will run on the same machine as my _master server_, I can configure the master servers's hostname to localhost. However, the hostname of the game server will be forwarded to the client, therefore, we will set a custom hostname the we will later add on the client's `/etc/hosts` file.
 
@@ -250,7 +250,7 @@ Hostname=pwn3.server
 Port=3333
 ```
 
-> __Note:__ You can remove the `[GameServer]` part
+> __note:__ You can remove the `[GameServer]` part
 
 Almost done, now we need to add a line in our client's `hosts` file to redirect the hostname `pwn3.server` to our master/game server.
 
@@ -258,7 +258,7 @@ Almost done, now we need to add a line in our client's `hosts` file to redirect 
 * macOS: `/etc/hosts`
 * Windows: `C:/Windows/System32/Drivers/etc/hosts`
 
-> __Note:__ You need to be sudo/administrator to edit this file
+> __note:__ You need to be sudo/administrator to edit this file
 
 For instance, if you server has the IP `192.168.1.11`, you can add the following line:
 
