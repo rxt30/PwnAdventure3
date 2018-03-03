@@ -1,9 +1,9 @@
 Pwn Adventure 3
 ===============
 
-Pwn Adventure 3: Pwnie Island is a game developed by [Vector35](https://vector35.com/) ([Binary Ninja](https://binary.ninja)'s devs) for the [Ghost in the Shellcode](http://ghostintheshellcode.com/) 2015 CTF. The game is a first-person, true open-world MMORPG where the gamer is expected to exploit vulnerabilities in order to finish the quests (and achievements) scattered all over the beautiful island (and beyond). For this, the _hacker_ will have to reverse engineer the network protocol as well as the game logic.
+Pwn Adventure 3: Pwnie Island is a game developed by [Vector35](https://vector35.com/) ([Binary Ninja](https://binary.ninja)'s devs) for the [Ghost in the Shellcode](http://ghostintheshellcode.com/) 2015 CTF. The game is a first-person, true open-world MMORPG where the player is expected to exploit vulnerabilities in order to finish the quests (and achievements) scattered all over the beautiful island (and beyond). For this, the _hacker_ will have to reverse engineer the network protocol as well as the game logic.
 
-As of now (March 2018), Vector35 still run a game server so that anyone can play the game online out of the box. Nevertheless, should you want to run your own server (e.g. the official is down or you want to run your own local server with you friends), you will find the install guide [here](INSTALL-server.md).
+As of now (March 2018), Vector35 still runs a game server so that anyone can play the game online out of the box. Nevertheless, should you want to run your own server (e.g. if the official server is down or you want to run your own local server with you friends), you will find the install guide [here](INSTALL-server.md).
 
 Vector35 offers a [training](https://vector35.com/training.html) based on Pwn Adventure including new challenges. There is also a workshop [[slides](https://www.slideshare.net/AntoninBeaujeant/reverse-engineering-a-mmorpg)] available that covers most of the quests (5/7).
 
@@ -13,20 +13,22 @@ Client installation
 
 Make sure your host has the minimum [requirements](http://pwnadventure.com/#downloads).
 
-[Download](http://pwnadventure.com/#downloads) [mirror [Windows](#)-[macOS](#)-[Linux](#)] the appropriate client according to your OS. The client is actually a launcher that will download the data files. Once downloaded, you can click "Play" and enjoy the game.
+[Download](http://pwnadventure.com/#downloads) the appropriate client according to your OS. The client is actually a launcher that will download the data files. Once downloaded, you can click "Play" and enjoy the game.
+
+> __note:__ I experience some issues with the macOS version where the screen is completely white unless I press ESC.
 
 
 
 Game structure
 --------------
 
-The game is structure in 3 parts:
+The game is structured in 3 parts:
 
 * Client
 * Master server
 * Game server
 
-> __note:__ The following information is purely build on assumptions and not from the official developers.
+> __note:__ The following information is purely build on assumptions and not from the official documentation.
 
 
 ### Client
@@ -46,12 +48,12 @@ Whenever the user click on "Play game" (online), the client will first establish
 * Your achievement
 * The locations you've already visited
 
-So whenever you first authenticate, the master server will verify your credentials then show your list of characters. Once you decide to join the world of Pwnie Island, the master server will send you your inventory, quests, achievement, etc; and redirect you to the game server.
+So whenever you first authenticate, the master server will verify your credentials then show your characters. Once you decide to join the world of Pwnie Island, the master server will send your inventory, quests, achievement, etc; and redirect you to the game server.
 
 
 ### Game server
 
-The game server is responsible for the instances. In order to avoid having too many players and enemy all together on the same map (instance), which would overload the network traffic and CPU usage of the server but the client as well, the game server will dispatch the players on different game instances. Each instance is manage by one game server. The game server is responsible for keeping track of the players and enemies location on the map. It is also responsible to keep track of the states of the elements (e.g. the dropped loots, switches, enemies and player health/mana, etc).
+The game server is responsible for the instances. In order to avoid having too many players and enemies all together on the same map (instance) - which would not only overload the network traffic and CPU usage of the server but the client as well - the game server will dispatch the players on different game instances. Each instance is managed by one game server. The game server is responsible for keeping track of the players and enemies location on the map. It is also responsible to keep track of the states of the elements (e.g. the dropped loots, switches, enemies and player health/mana, etc).
 
 
 
