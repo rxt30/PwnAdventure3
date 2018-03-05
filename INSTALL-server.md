@@ -1,7 +1,9 @@
 Install Pwn Adventure 3 server
 ==============================
 
-You might want to run your own server instance. The official install guide may sometime be a bit confusing. Therefore, here is a tutorial to install and configure your own Pwn Adventure 3 server.
+For whatever reason, you might want to run your own server instance. The official install guide may sometimes be a bit confusing. Therefore, here is a tutorial to install and configure your own Pwn Adventure 3 server.
+
+> __note:__ Should you want to quickly deploy the server in a docker, [LiveOverflow](https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w) has created a tutorial for that: https://github.com/LiveOverflow/PwnAdventure3
 
 
 Initial setup
