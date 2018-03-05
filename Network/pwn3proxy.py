@@ -7,7 +7,7 @@ Created By: Antonin Beaujeant
 Description: Pwn3Proxy is a custom asynchronous proxy for Pwn Adventure 3 based on https://gist.github.com/majek/1662475. More info: https://blog.keyidentity.com/2017/06/27/pwnadventure3-asynchronous-proxy-in-python/
 
 Example:
-    $ python pwn3proxy.py 192.168.1.10
+    $ python pwn3proxy.py -H 192.168.1.10
 
 """
 
@@ -350,7 +350,7 @@ class ProxServer(FixedDispatcher):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Custom asynchronous proxy for Pwn Adventure 3')
-    parser.add_argument('-h', "--host", required=True, help='Pwn Adventure 3 master server IP/hostname')
+    parser.add_argument('-H', "--host", required=True, help='Pwn Adventure 3 master server IP/hostname')
     args = parser.parse_args()
 
     while True:
