@@ -18,6 +18,8 @@ f.vz = ProtoField.uint32 ("pwn3.vz", "Vector Z", base.DEC)
 
 f.mana = ProtoField.uint32 ("pwn3.mana", "Mana", base.DEC)
 
+f.str = ProtoField.string ("pwn3.str", "String")
+
 f.unknown = ProtoField.uint8 ("pwn3.unknown", "Unknown", base.HEX)
 
 
