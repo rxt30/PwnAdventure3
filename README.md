@@ -5,7 +5,7 @@ Pwn Adventure 3: Pwnie Island is a game developed by [Vector35](https://vector35
 
 As of now (March 2018), Vector35 still runs a game server so that anyone can play the game online out of the box. Nevertheless, should you want to run your own server (e.g. if the official server is down or you want to run your own local server with you friends), you will find the install guide [here](INSTALL-server.md).
 
-Vector35 offers a [training](https://vector35.com/training.html) based on Pwn Adventure including new challenges. There is also a workshop [[slides](https://www.slideshare.net/AntoninBeaujeant/reverse-engineering-a-mmorpg)] available that covers most of the quests (5/7).
+Vector35 offers a [training](https://vector35.com/training.html) based on Pwn Adventure including new challenges. There is also a workshop [[slides](https://github.com/beaujeant/PwnAdventure3/tree/master/Workshop/)] available that covers most of the quests (5/7).
 
 
 Client installation
