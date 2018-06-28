@@ -24,6 +24,9 @@ def parse(p_out):
     """Contains all modifications to apply on the communication between the client and the server
     """
 
+    p_in = ""
+    p_next = ""
+
     return (p_in, p_out, p_next)
 
 
@@ -128,7 +131,7 @@ class ProxServer(FixedDispatcher):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Asynchronous proxy')
-    parser.add_argument('-h', "--host", required=True, help='Target server IP/hostname')
+    parser.add_argument('-H', "--host", required=True, help='Target server IP/hostname')
     args = parser.parse_args()
 
     while True:
