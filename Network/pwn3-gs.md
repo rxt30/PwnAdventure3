@@ -161,6 +161,17 @@ Jump (jp)
 * ?: Unknown (always = 0x00)
 
 
+Run (rn)
+--------
+
+```
+[II II] [TT]
+```
+
+* I: Identification number = 0x6a 0x70
+* T: Toggle value (i.e. 0x01 = run, 0x00 = walk)
+
+
 Update mana (ma)
 ----------------
 
@@ -267,6 +278,17 @@ Change PvP state (pv)
 * T: Toggle value (i.e. 0x01 = enable, 0x00 = disable)
 
 
+Set current quest (q=)
+----------------------
+
+```
+[II II] [LL LL] [QQ QQ ...]
+```
+
+* I: Identification number = 0x71 0x3d
+* L: Length of the quest’s name
+* Q: Quest name
+
 Quest finished (q>)
 -------------------
 
@@ -278,29 +300,6 @@ Quest finished (q>)
 * L: Length of the location
 * W: Location name
 * M: Length of the quest’s name
-* Q: Quest name
-
-
-Run (rn)
---------
-
-```
-[II II] [TT]
-```
-
-* I: Identification number = 0x6a 0x70
-* T: Toggle value (i.e. 0x01 = run, 0x00 = walk)
-
-
-Set current quest (q=)
-----------------------
-
-```
-[II II] [LL LL] [QQ QQ ...]
-```
-
-* I: Identification number = 0x71 0x3d
-* L: Length of the quest’s name
 * Q: Quest name
 
 
