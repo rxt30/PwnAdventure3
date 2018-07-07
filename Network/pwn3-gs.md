@@ -154,11 +154,11 @@ Jump (jp)
 ---------
 
 ```
-[II II] [??]
+[II II] [SS]
 ```
 
-* I: Identification number = 0x6a 0x70
-* ?: Unknown (always = 0x00)
+* I: Identification number = 0x6a (j) 0x70 (p)
+* S: State (0x00: OnGround, 0x01: Airborne)
 
 
 Run (rn)
