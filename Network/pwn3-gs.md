@@ -304,6 +304,17 @@ Set current quest (q=)
 * Q: Quest name
 
 
+Change player weapon slot (s=)
+------------------------
+
+```
+[II II] [SS]
+```
+
+* I: Identification number = 0x73 (s) 0x3d (=)
+* S: Weapon slot number, 0x00 for slot 1 up to 0x09 for slot 0
+
+
 Change player state (st)
 ------------------------
 
