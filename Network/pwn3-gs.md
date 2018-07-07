@@ -161,17 +161,6 @@ Jump (jp)
 * S: State (0x00: OnGround, 0x01: Airborne)
 
 
-Run (rn)
---------
-
-```
-[II II] [TT]
-```
-
-* I: Identification number = 0x72 (r) 0x63 (n)
-* T: Toggle value (i.e. 0x01 = run, 0x00 = walk)
-
-
 Update mana (ma)
 ----------------
 
@@ -289,6 +278,7 @@ Set current quest (q=)
 * L: Length of the quest’s name
 * Q: Quest name
 
+
 Quest finished (q>)
 -------------------
 
@@ -301,6 +291,17 @@ Quest finished (q>)
 * W: Location name
 * M: Length of the quest’s name
 * Q: Quest name
+
+
+Run (rn)
+--------
+
+```
+[II II] [TT]
+```
+
+* I: Identification number = 0x72 (r) 0x63 (n)
+* T: Toggle value (i.e. 0x01 = run, 0x00 = walk)
 
 
 Change player state (st)
