@@ -168,7 +168,7 @@ Run (rn)
 [II II] [TT]
 ```
 
-* I: Identification number = 0x6a 0x70
+* I: Identification number = 0x72 (r) 0x63 (n)
 * T: Toggle value (i.e. 0x01 = run, 0x00 = walk)
 
 
