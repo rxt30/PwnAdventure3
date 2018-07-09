@@ -304,6 +304,29 @@ Run (rn)
 * T: Toggle value (i.e. 0x01 = run, 0x00 = walk)
 
 
+Set current quest (q=)
+----------------------
+
+```
+[II II] [LL LL] [QQ QQ ...]
+```
+
+* I: Identification number = 0x71 0x3d
+* L: Length of the quest’s name
+* Q: Quest name
+
+
+Change player weapon slot (s=)
+------------------------
+
+```
+[II II] [SS]
+```
+
+* I: Identification number = 0x73 (s) 0x3d (=)
+* S: Weapon slot number, 0x00 for slot 1 up to 0x09 for slot 0
+
+
 Change player state (st)
 ------------------------
 
