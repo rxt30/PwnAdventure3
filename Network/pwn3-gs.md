@@ -154,11 +154,11 @@ Jump (jp)
 ---------
 
 ```
-[II II] [??]
+[II II] [SS]
 ```
 
-* I: Identification number = 0x6a 0x70
-* ?: Unknown (always = 0x00)
+* I: Identification number = 0x6a (j) 0x70 (p)
+* S: State (0x00: OnGround, 0x01: Airborne)
 
 
 Update mana (ma)
@@ -202,15 +202,15 @@ Update location (mv)
 [II II] [XX XX XX XX] [YY YY YY YY] [ZZ ZZ ZZ ZZ] [RR RR] [YY YY] [PP PP] [FF] [SS] [[ ?? ?? ]]
 ```
 
-* I: Identification number = 0x6d 0x76
+* I: Identification number = 0x6d (m) 0x76 (v)
 * X: My position on the xaxis on the map
 * Y: My position on the yaxis on the map
 * Z: My position on the zaxis on the map
 * R: The direction where I look on the rollaxis
 * Y: The direction where I look on the yawaxis
 * P: The direction where I look on the pitchaxis
-* F: The direction where I go (forward or backward)
-* S: The direction where I strafe (left or right)
+* F: The direction where I go (0x7f: forward, 0x81: backward, or 0x00: netural)
+* S: The direction where I strafe (0x7f: right, 0x81: left or 0x00: netural)
 * [?]: Unknown value that appears whenever F = 0xc0 or 0x08
 
 
@@ -267,6 +267,18 @@ Change PvP state (pv)
 * T: Toggle value (i.e. 0x01 = enable, 0x00 = disable)
 
 
+Set current quest (q=)
+----------------------
+
+```
+[II II] [LL LL] [QQ QQ ...]
+```
+
+* I: Identification number = 0x71 0x3d
+* L: Length of the quest’s name
+* Q: Quest name
+
+
 Quest finished (q>)
 -------------------
 
@@ -288,7 +300,7 @@ Run (rn)
 [II II] [TT]
 ```
 
-* I: Identification number = 0x6a 0x70
+* I: Identification number = 0x72 (r) 0x63 (n)
 * T: Toggle value (i.e. 0x01 = run, 0x00 = walk)
 
 
