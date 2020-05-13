@@ -231,7 +231,7 @@ cd ~/PwnAdventure3/servers/GameServer/PwnAdventure3_Data/PwnAdventure3/PwnAdvent
 Instead of running the master and game server separately, you can use the following script bash script `pwn3.sh`:
 
 ```
-(cd ~/PwnAdventure3/servers/MasterServer/ && ./MasterServer) & (cd ~/PwnAdventure3/GameServer/PwnAdventure3_Data/PwnAdventure3/Binaries/Linux/ && ./PwnAdventure3Server)
+(cd ~/PwnAdventure3/servers/MasterServer/ && ./MasterServer) & (cd ~/PwnAdventure3/servers/GameServer/PwnAdventure3_Data/PwnAdventure3/Binaries/Linux/ && ./PwnAdventure3Server)
 ```
 
 > __note:__ Don't forget to set execution permission with `chmod +x pwn3.sh`
